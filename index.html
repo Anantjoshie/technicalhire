@@ -1,356 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technical Hire Consultancy - 15 Days Mechanical & Civil Engineering Training and Placement</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Technical Hire Consultancy | 15-Day Mechanical & Civil Engineering Training with Placement</title>
+<meta name="description" content="15-day professional training and placement program for Mechanical and Civil Engineering. 100% placement support across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E2747; --navy-2:#173a66; --ink:#1b2430; --muted:#5b6778;
+  --paper:#f6f4ef; --white:#ffffff; --line:#dcd8cf;
+  --hivis:#f4b400; --rust:#c8431a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Barlow Condensed',sans-serif;line-height:1.05;letter-spacing:.2px}
+a{color:inherit;text-decoration:none}
+.wrap{width:92%;max-width:1200px;margin:auto}
+:focus-visible{outline:3px solid var(--hivis);outline-offset:3px}
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    html { scroll-behavior: smooth; }
-    body { background: #071433; color: white; overflow-x: hidden; }
-    a { text-decoration: none; color: white; }
-    .container { width: 90%; max-width: 1300px; margin: auto; }
+/* header */
+header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}
+.logo img{height:56px;display:block}
+nav{display:flex;gap:28px;font-weight:500;font-size:15px}
+nav a{padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--hivis)}
+.btn{display:inline-block;background:var(--hivis);color:#1a1400;font-weight:600;padding:13px 26px;border-radius:4px;transition:background .2s}
+.btn:hover{background:#ffc82e}
+.btn.dark{background:var(--navy);color:#fff}
+.btn.dark:hover{background:var(--navy-2)}
+.btn.ghost{background:transparent;border:2px solid currentColor;color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
 
-    header { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; }
-    .logo img { height: 70px; }
-    nav a { margin: 0 15px; font-size: 15px; color: #d7d7d7; transition: 0.3s; }
-    nav a:hover { color: #ffc400; }
+/* hero */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:84px 0 96px}
+.hero h1{font-size:clamp(44px,6vw,80px);font-weight:700}
+.hero h1 span{color:var(--hivis)}
+.hero .lead{margin:24px 0 32px;max-width:540px;color:#cfd9e8;font-size:19px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero .motto{margin-top:34px;color:#9fb3cf;font-size:15px}
+.sheet{background:var(--white);color:var(--ink);border-radius:6px;overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.35)}
+.sheet-head{background:var(--hivis);color:#1a1400;padding:18px 26px;font-family:'Barlow Condensed';font-weight:700;font-size:26px}
+.sheet dl{padding:8px 26px 18px}
+.sheet div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.sheet div:last-child{border-bottom:0}
+.sheet dt{color:var(--muted)}
+.sheet dd{font-weight:600;text-align:right}
+.hazard{height:14px;background:repeating-linear-gradient(-45deg,var(--hivis) 0 22px,#14181f 22px 44px)}
 
-    .btn {
-      background: linear-gradient(90deg,#ffc400,#ffdf4d);
-      color: #071433;
-      padding: 12px 28px;
-      border-radius: 10px;
-      font-weight: 600;
-      display: inline-block;
-      transition: 0.3s;
-    }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255,196,0,0.3); }
+/* sections */
+section{padding:88px 0}
+.head{max-width:640px;margin-bottom:48px}
+.head h2{font-size:clamp(34px,4.4vw,52px);color:var(--navy);font-weight:700}
+.head p{color:var(--muted);margin-top:14px}
 
-    .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; padding: 50px 0 100px; }
-    .tagline { color: #ff7a1a; font-weight: 600; margin-bottom: 10px; }
-    .hero h1 {
-      font-size: 64px; line-height: 70px;
-      background: linear-gradient(90deg,#ffc400,#ffe680);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      font-weight: 800;
-    }
-    .hero h2 { font-size: 30px; margin-top: 10px; margin-bottom: 20px; }
-    .hero p { color: #c8c8c8; line-height: 1.8; margin-bottom: 30px; }
-    .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
-    .secondary-btn { border: 2px solid #ffc400; padding: 12px 28px; border-radius: 10px; transition: 0.3s; }
-    .secondary-btn:hover { background: rgba(255,196,0,0.1); }
-    .hero-image img { width: 100%; border-radius: 20px; }
+/* why */
+.why-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.why-list div{padding:22px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:8px 1fr;gap:18px}
+.why-list div::before{content:"";background:var(--hivis);border-radius:2px}
+.why-list h3{font-size:26px;color:var(--navy);font-weight:600}
+.why-list p{color:var(--muted);margin-top:4px;font-size:16px}
 
-    .highlights { background: #0b1d4d; padding: 40px 0; }
-    .highlight-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 20px; text-align: center; }
-    .highlight-grid div { padding: 20px; border-radius: 14px; background: #11265f; }
-    .highlight-grid strong { display: block; font-size: 38px; color: #ffc400; }
-    .highlight-grid span { color: #c8c8c8; font-size: 14px; }
+/* programs */
+.programs{background:var(--white)}
+.prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.prog{border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.prog-top{padding:28px 32px;color:#fff}
+.prog.mech .prog-top{background:var(--navy)}
+.prog.civil .prog-top{background:var(--rust)}
+.prog-top h3{font-size:36px;font-weight:700}
+.prog-top p{opacity:.85;font-size:15px;margin-top:4px}
+.prog ul{list-style:none;padding:12px 32px 26px}
+.prog li{padding:12px 0 12px 30px;border-bottom:1px solid var(--line);position:relative}
+.prog li:last-child{border-bottom:0}
+.prog li::before{content:"";position:absolute;left:4px;top:19px;width:12px;height:7px;border-left:3px solid var(--hivis);border-bottom:3px solid var(--hivis);transform:rotate(-45deg)}
 
-    .features { padding: 80px 0; background: #0a1938; }
-    .section-title { text-align: center; font-size: 42px; margin-bottom: 50px; color: #ffc400; }
-    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 25px; }
-    .feature-card { background: #11265f; padding: 30px; border-radius: 18px; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05); }
-    .feature-card:hover { transform: translateY(-5px); border-color: #ffc400; }
-    .feature-card h3 { margin: 15px 0; color: #ffc400; }
-    .feature-card p { color: #b8b8b8; line-height: 1.6; font-size: 14px; }
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.step{padding:0 28px 0 0;position:relative}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:var(--navy);color:var(--hivis);font-family:'Barlow Condensed';font-weight:700;font-size:28px;position:relative;z-index:1}
+.step::after{content:"";position:absolute;top:27px;left:54px;right:0;height:2px;background:var(--line)}
+.step:last-child::after{display:none}
+.step h3{font-size:28px;color:var(--navy);margin:18px 0 6px}
+.step p{color:var(--muted);font-size:16px}
 
-    .courses { padding: 90px 0; }
-    .course-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 30px; }
-    .course { background: #0f1f4a; border-radius: 18px; padding: 35px; border-top: 5px solid #ffc400; }
-    .course h3 { font-size: 24px; color: #ffc400; margin-bottom: 20px; }
-    .course ul { list-style: none; }
-    .course li { padding: 8px 0 8px 28px; position: relative; color: #d7d7d7; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 15px; }
-    .course li::before { content: "✔"; position: absolute; left: 0; color: #ffc400; }
+/* cta */
+.cta{background:var(--navy);color:#fff;padding:0}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;padding:64px 0}
+.cta h2{font-size:clamp(36px,5vw,58px)}
+.cta p{color:#cfd9e8;margin-top:10px}
+.phone{font-family:'Barlow Condensed';font-size:44px;font-weight:700;color:var(--hivis);display:block;margin-bottom:12px}
 
-    .info { padding: 20px 0 90px; }
-    .info-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 30px; }
-    .info-card { background: #0f1f4a; padding: 35px 25px; border-radius: 18px; text-align: center; }
-    .info-card h3 { color: #ffc400; margin-bottom: 15px; }
-    .info-card .big { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
-    .info-card p { color: #c8c8c8; line-height: 1.6; }
+/* footer */
+footer{background:#08182e;color:#a9b8cf;padding:56px 0 24px;font-size:15px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer h3{color:#fff;font-size:22px;margin-bottom:12px}
+footer a{display:block;padding:3px 0}
+footer a:hover{color:var(--hivis)}
+.f-logo{height:52px;margin-bottom:14px;background:#fff;padding:6px 10px;border-radius:4px}
+.copy{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);text-align:center;font-size:14px}
 
-    .how-it-works { padding: 90px 0; background: #0a1938; }
-    .steps { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 30px; margin-top: 50px; }
-    .step { text-align: center; background: #0f1f4a; padding: 35px 20px; border-radius: 18px; }
-    .step-number {
-      width: 60px; height: 60px;
-      background: linear-gradient(90deg,#ffc400,#ffdf4d); color: #071433;
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      margin: auto; font-size: 22px; font-weight: 700; margin-bottom: 20px;
-    }
-    .step p { color: #c8c8c8; font-size: 14px; margin-top: 8px; }
-
-    .cta {
-      background: linear-gradient(90deg,#c8102e,#e8452c);
-      margin: 80px auto; border-radius: 25px; padding: 60px 40px; text-align: center;
-    }
-    .cta h2 { font-size: 45px; margin-bottom: 20px; }
-    .cta .btn { margin-top: 10px; }
-
-    footer { background: #040b1f; padding: 50px 0 20px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 40px; }
-    footer h3 { margin-bottom: 20px; color: #ffc400; }
-    footer p, footer a { color: #c0c0c0; line-height: 2; font-size: 14px; }
-    .copyright { text-align: center; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; color: #888; font-size: 14px; }
-
-    @media(max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 44px; line-height: 52px; }
-      .section-title { font-size: 32px; }
-      .cta h2 { font-size: 32px; }
-      header { flex-direction: column; gap: 20px; }
-      nav { text-align: center; }
-    }
-  </style>
+@media(max-width:900px){
+  nav{display:none}
+  .hero .wrap,.prog-grid,.f-grid{grid-template-columns:1fr}
+  .hero .wrap{padding:56px 0 64px;gap:40px}
+  .why-list{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr;gap:36px 0}
+  .step:nth-child(2)::after{display:none}
+  section{padding:64px 0}
+}
+@media(max-width:520px){.steps{grid-template-columns:1fr}.step::after{display:none}.nav .btn{padding:10px 16px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
 
-  <div class="container">
-
-    <header>
-      <div class="logo">
-        <img src="logo.png" alt="Technical Hire Consultancy Logo">
-      </div>
-
-      <nav>
-        <a href="#">Home</a>
-        <a href="#features">Why Us</a>
-        <a href="#courses">Courses</a>
-        <a href="#works">How It Works</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <a href="tel:8269846798" class="btn">Enroll Now</a>
-    </header>
-
-    <section class="hero">
-
-      <div class="hero-content">
-        <p class="tagline">Right Talent | Better Careers | Stronger Tomorrow</p>
-        <h1>Build Your Career in Mechanical &amp; Civil Engineering</h1>
-        <h2>15 Days Professional Training &amp; Placement Program</h2>
-
-        <p>
-          Professional training, practical skills and 100% placement support.
-          Learn from expert faculty, work on real projects and get placed
-          across India. Your Skills. Our Support. Your Job!
-        </p>
-
-        <div class="hero-buttons">
-          <a href="tel:8269846798" class="btn">Enroll Now</a>
-          <a href="#courses" class="secondary-btn">Explore Courses</a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <img src="hero-image.jpg" alt="Engineers at a construction site">
-      </div>
-
-    </section>
-
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo"><img src="logo.png" alt="Technical Hire Consultancy"></a>
+    <nav>
+      <a href="#why">Why Us</a>
+      <a href="#programs">Programs</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:8269846798" class="btn">Call 8269846798</a>
   </div>
+</header>
 
-  <section class="highlights">
-    <div class="container">
-      <div class="highlight-grid">
-        <div><strong>15</strong><span>Days Program</span></div>
-        <div><strong>100%</strong><span>Job Placement Guarantee</span></div>
-        <div><strong>₹25K–45K</strong><span>Attractive Salary / Month</span></div>
-        <div><strong>Pan India</strong><span>Job Location</span></div>
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Build your career in <span>Mechanical &amp; Civil</span> Engineering</h1>
+      <p class="lead">A 15-day professional training and placement program with hands-on practice, real project exposure and 100% placement support across India.</p>
+      <div class="actions">
+        <a href="tel:8269846798" class="btn">Enroll now</a>
+        <a href="#programs" class="btn ghost">View programs</a>
       </div>
+      <p class="motto">Right Talent | Better Careers | Stronger Tomorrow</p>
     </div>
-  </section>
-
-  <section class="features" id="features">
-    <div class="container">
-
-      <h2 class="section-title">Why Choose Us</h2>
-
-      <div class="feature-grid">
-
-        <div class="feature-card">
-          <h3>Hands-On Practical Training</h3>
-          <p>100% practical learning that prepares you for real site and plant work.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Expert Faculty</h3>
-          <p>Learn from experienced trainers with deep industry knowledge.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Real Project Exposure</h3>
-          <p>Industry-focused training built around real projects.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Interview Preparation</h3>
-          <p>Get ready to face interviews with confidence.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Placement Assistance</h3>
-          <p>A trusted placement partner supporting you until you get the job.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Pan India Placement</h3>
-          <p>Job opportunities across India in your chosen field.</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="courses" id="courses">
-    <div class="container">
-
-      <h2 class="section-title">Our Training Programs</h2>
-
-      <div class="course-grid">
-
-        <div class="course">
-          <h3>Mechanical Engineering</h3>
-          <ul>
-            <li>QA/QC in Facility Systems</li>
-            <li>NDT Inspection (RT, UT, MT, PT, LT, DPT)</li>
-            <li>Site Engineering</li>
-            <li>Coating &amp; Hydro Testing</li>
-            <li>Steel Structures</li>
-            <li>Documentation &amp; Reporting</li>
-          </ul>
-        </div>
-
-        <div class="course">
-          <h3>Civil Engineering</h3>
-          <ul>
-            <li>QA/QC in Construction</li>
-            <li>Site Engineering &amp; Supervision</li>
-            <li>Structural Inspection</li>
-            <li>Concrete &amp; Material Testing</li>
-            <li>Roads, Bridges &amp; Infrastructure</li>
-            <li>Quality Documentation</li>
-            <li>Survey &amp; Measurement</li>
-            <li>Safety &amp; Site Management</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="info">
-    <div class="container">
-      <div class="info-grid">
-
-        <div class="info-card">
-          <h3>Attractive Salary</h3>
-          <div class="big">₹25,000 – ₹45,000</div>
-          <p>Per Month</p>
-        </div>
-
-        <div class="info-card">
-          <h3>Qualification</h3>
-          <div class="big">B.Tech &amp; Diploma</div>
-          <p>in Mechanical / Civil Engineering</p>
-        </div>
-
-        <div class="info-card">
-          <h3>Internship / Training to Placement</h3>
-          <div class="big">Limited Seats</div>
-          <p>Your growth is our mission.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="how-it-works" id="works">
-    <div class="container">
-
-      <h2 class="section-title">How It Works</h2>
-
-      <div class="steps">
-
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Enroll</h3>
-          <p>Call us and reserve your seat in the 15 days program.</p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Train</h3>
-          <p>Hands-on practical training with expert faculty and real project exposure.</p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Prepare</h3>
-          <p>Interview preparation and placement assistance.</p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">4</div>
-          <h3>Get Placed</h3>
-          <p>Start your job anywhere across India.</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <div class="container">
-
-    <section class="cta">
-      <h2>Join Today. Build Your Future!</h2>
-      <p>Limited seats. Enroll now and take the first step towards your engineering career.</p>
-      <br>
-      <a href="tel:8269846798" class="btn">Call 8269846798</a>
-    </section>
-
+    <aside class="sheet" aria-label="Program details">
+      <div class="sheet-head">15 Days Training &amp; Placement</div>
+      <dl>
+        <div><dt>Branches</dt><dd>Mechanical, Civil</dd></div>
+        <div><dt>Qualification</dt><dd>B.Tech or Diploma</dd></div>
+        <div><dt>Salary</dt><dd>₹25,000 – ₹45,000 / month</dd></div>
+        <div><dt>Placement</dt><dd>100% guaranteed</dd></div>
+        <div><dt>Job location</dt><dd>Pan India</dd></div>
+        <div><dt>Seats</dt><dd>Limited</dd></div>
+      </dl>
+    </aside>
   </div>
+  <div class="hazard"></div>
+</div>
 
-  <footer id="contact">
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div>
-          <img src="logo.png" alt="Logo" style="height:60px; margin-bottom:20px;">
-          <p>Technical Hire Consultancy<br>Skilled Today | Successful Tomorrow</p>
-        </div>
-
-        <div>
-          <h3>Quick Links</h3>
-          <a href="#">Home</a><br>
-          <a href="#features">Why Us</a><br>
-          <a href="#courses">Courses</a><br>
-          <a href="#works">How It Works</a>
-        </div>
-
-        <div>
-          <h3>Contact</h3>
-          <p>📞 8269846798</p>
-          <p>📍 Job Location: Pan India</p>
-        </div>
-
-      </div>
-
-      <div class="copyright">
-        © 2026 Technical Hire Consultancy. All Rights Reserved.
-      </div>
-
+<section id="why">
+  <div class="wrap">
+    <div class="head">
+      <h2>Training that ends in a job</h2>
+      <p>Your skills, our support, your job. Everything in the program is built around getting you site-ready and placed.</p>
     </div>
-  </footer>
+    <div class="why-list">
+      <div><span><h3>Hands-on practical training</h3><p>100% practical learning on the tools and methods used on site and in the plant.</p></span></div>
+      <div><span><h3>Expert faculty</h3><p>Experienced trainers from the industry guide every session.</p></span></div>
+      <div><span><h3>Real project exposure</h3><p>Industry-focused training built around real project work.</p></span></div>
+      <div><span><h3>Interview preparation</h3><p>Practice and guidance so you face interviews with confidence.</p></span></div>
+      <div><span><h3>Placement assistance</h3><p>A trusted placement partner with you until you are placed.</p></span></div>
+      <div><span><h3>Pan India placement</h3><p>Job openings across India in your chosen branch.</p></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <div class="head">
+      <h2>Choose your program</h2>
+      <p>Both programs run for 15 days and lead into placement.</p>
+    </div>
+    <div class="prog-grid">
+      <article class="prog mech">
+        <div class="prog-top"><h3>Mechanical Engineering</h3><p>QA/QC, NDT and site engineering</p></div>
+        <ul>
+          <li>QA/QC in Facility Systems</li>
+          <li>NDT Inspection (RT, UT, MT, PT, LT, DPT)</li>
+          <li>Site Engineering</li>
+          <li>Coating &amp; Hydro Testing</li>
+          <li>Steel Structures</li>
+          <li>Documentation &amp; Reporting</li>
+        </ul>
+      </article>
+      <article class="prog civil">
+        <div class="prog-top"><h3>Civil Engineering</h3><p>Construction quality, supervision and safety</p></div>
+        <ul>
+          <li>QA/QC in Construction</li>
+          <li>Site Engineering &amp; Supervision</li>
+          <li>Structural Inspection</li>
+          <li>Concrete &amp; Material Testing</li>
+          <li>Roads, Bridges &amp; Infrastructure</li>
+          <li>Quality Documentation</li>
+          <li>Survey &amp; Measurement</li>
+          <li>Safety &amp; Site Management</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="head"><h2>From enrollment to your first day on site</h2></div>
+    <div class="steps">
+      <div class="step"><h3>Enroll</h3><p>Call us and reserve one of the limited seats.</p></div>
+      <div class="step"><h3>Train</h3><p>Practical sessions with expert faculty and real project exposure.</p></div>
+      <div class="step"><h3>Prepare</h3><p>Interview preparation and placement assistance.</p></div>
+      <div class="step"><h3>Get placed</h3><p>Join a job anywhere in India.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <div>
+      <h2>Join today. Build your future.</h2>
+      <p>Limited seats. Open to B.Tech and Diploma graduates in Mechanical or Civil Engineering.</p>
+    </div>
+    <div>
+      <a href="tel:8269846798" class="phone">8269846798</a>
+      <a href="tel:8269846798" class="btn">Call to enroll</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img class="f-logo" src="logo.png" alt="Technical Hire Consultancy">
+        <p>Your Career, Our Priority.<br>Skilled Today | Successful Tomorrow</p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <a href="#why">Why Us</a>
+        <a href="#programs">Programs</a>
+        <a href="#process">How It Works</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:8269846798">Mobile: 8269846798</a>
+        <p>Job location: Pan India</p>
+      </div>
+    </div>
+    <div class="copy">© 2026 Technical Hire Consultancy. All rights reserved.</div>
+  </div>
+</footer>
 
 </body>
 </html>
